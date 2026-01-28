@@ -1,0 +1,80 @@
+/* Reset e basi */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; color:#111; background:#fff; }
+
+/* Navbar minimal */
+nav {
+  position: fixed; top:0; width:100%; height:60px;
+  display:flex; justify-content:space-between; align-items:center;
+  padding: 0 40px; background:rgba(255,255,255,0.8); backdrop-filter: blur(10px);
+  z-index:10;
+}
+nav .logo {
+  font-size:26px; font-weight:700; cursor:pointer;
+}
+nav .menu a {
+  margin-left:30px; text-decoration:none;
+  font-size:16px; color:#111; transition: color .2s;
+}
+nav .menu a:hover { color:#888; }
+
+/* Hero full-screen */
+#hero {
+  height: 100vh;
+  background: url('path/to/hero.jpg') center/cover no-repeat;
+  display:flex; justify-content:center; align-items:center;
+}
+.hero-text {
+  font-size:48px; color:white; text-transform:uppercase;
+  text-shadow:2px 2px 8px rgba(0,0,0,0.8);
+}
+
+/* Sezioni */
+section {
+  padding:100px 20px;
+}
+.container {
+  max-width:1200px; margin:0 auto; text-align:center;
+}
+h2 {
+  font-size:36px; color:#111; margin-bottom:40px;
+  text-transform:uppercase;
+}
+p {
+  font-size:18px; color:#333; max-width:800px; margin:0 auto 40px;
+}
+
+/* Galleria grid */
+.gallery {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap:20px; margin-bottom:40px;
+}
+.gallery img {
+  width:100%; display:block;
+  height: auto; object-fit:cover;
+  transition: transform .3s;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Pulsanti */
+.cta-button {
+  display:inline-block;
+  padding:15px 35px; text-decoration:none;
+  background:#111; color:white;
+  font-size:16px; text-transform:uppercase;
+  transition: background .3s, color .3s;
+}
+.cta-button:hover {
+  background:white; color:#111;
+  border:1px solid #111;
+}
+
+/* Footer */
+footer {
+  padding:40px; text-align:center;
+  font-size:14px; color:#777;
+  border-top:1px solid #eee;
+}
